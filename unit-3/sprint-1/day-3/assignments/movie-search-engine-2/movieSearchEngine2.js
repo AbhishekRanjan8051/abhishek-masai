@@ -1,3 +1,12 @@
+let input = document.getElementById("movie");
+
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("mybtn").click();
+  }
+});
+
 async function myFunction() {
   var name = document.getElementById("movie").value;
   var output = document.getElementById("movieshow");
