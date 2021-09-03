@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        width: 200px;
+      }
+
+      #movies {
+        height: 200px;
+        width: 206px;
+        border: 1px solid black;
+        border-top: none;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="query" placeholder="search" oninput="main()" />
+    <button>Search</button>
+
+    <div id="movies"></div>
+  </body>
+</html>
+
+<script>
+  //get the input
+
+  async function makeRequest(n) {
+    let response = await fetch(
+      "http://www.omdbapi.com/?t=${n}&apikey=eb13a6ff"
+    );
+
+    let data = await response.json();
+    // console.log("data:", data);
+
+    return data.Search;
+  }
+
+  async function main() {
+    let name = document.getElementById("query").value;
+    // console.log('name:', name)
+
+    if (name.length < 3) {
+      return false;
+    }
+
+    let movies = await makeRequest(name);
+    console.log("movies:", movies);
+    // console.log("name:", name);  
+  }
+</script>

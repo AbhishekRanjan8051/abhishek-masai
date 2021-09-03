@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <div>
+        <input type="text" id="city" />
+        <button onclick="getWeather()">Search</button>
+      </div>
+    </center>
+    <div id="weather"></div>
+  </body>
+</html>
+<script>
+  let weather = document.getElementById("weather");
+  async function getWeather() {
+    let city = document.getElementById("city").value;
+
+    try {
+      let response = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=56a1b72457882c27f73c03f6543d0cf2`
+      );
+
+      let data = await response.json();
+      //   console.log("data:", data);
+      //   console.log("data:", Math.round(data.main.temp - 273));
+      let temps = Math.round(data.main.temp - 273);
+      console.log("temps:", temps);
+
+      weather.append(temps);
+    } catch (error) {
+      console.log("error:", error);
+    }
+  }
+  //   getWeather();
+</script>

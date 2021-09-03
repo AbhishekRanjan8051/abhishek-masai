@@ -1,7 +1,7 @@
 async function myFunction() {
   var name = document.getElementById("movie").value;
   var output = document.getElementById("movieshow");
-  let res = await fetch(`https://www.omdbapi.com/?t=${name}&apikey=eb13a6ff`);
+  let res = await fetch(`http://www.omdbapi.com/?t=${name}&page=2&apikey=eb13a6ff`);
   let data = await res.json();
   console.log("data:", data);
 

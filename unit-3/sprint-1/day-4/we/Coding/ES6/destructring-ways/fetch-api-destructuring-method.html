@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Destructing ways to get data from api</h1>
+  </body>
+</html>
+
+<script>
+  // async function makeRequest() {
+  //   let response = await fetch("https://reqres.in/api/users?page=2");
+  //   let data = await response.json();
+  //   console.log("data:", data.data);
+
+  // }
+  // makeRequest();
+
+  fetch("https://reqres.in/api/users/2")
+
+  
+    .then((response) => {
+      return response.json().then((response) => {
+        let data = response.data;
+        console.log("data:", data);
+
+        let { first_name, email } = data
+        console.log("email:", email);
+        console.log("first_name:", first_name);
+      });
+    })
+    .catch(function (error) {
+      console.log("error:", error);
+    });
+</script>
