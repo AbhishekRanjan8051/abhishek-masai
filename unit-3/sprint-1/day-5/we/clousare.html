@@ -10,8 +10,12 @@
 </html>
 
 <script>
+
+  //two function nested
+
+  /*
   function parent() {
-    let msg = "bsdk";
+    let msg = "hello";
 
     function children() {
       console.log(`${msg} nitish`);
@@ -23,4 +27,31 @@
 //   console.log('function_pss:', function_pss)
 
   funtion_pss();
+  */
+
+
+   // three function nested functions
+
+   function parent() {
+    let msg = "hello";
+
+    return function children() {
+     
+      let name = "abhishek"
+      return function child() {
+
+        console.log(`${msg} ${name}`)
+      }
+    }
+    // return children();
+  }
+
+  let funtion_pss = parent();
+
+  let second_pass = funtion_pss();
+
+
+  second_pass();
+
+
 </script>

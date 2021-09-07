@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>debouncing/clouser</title>
     <style>
       input {
         width: 200px;
@@ -20,7 +20,12 @@
     </style>
   </head>
   <body>
-    <input type="text" id="query" placeholder="search" oninput="main()" />
+    <input
+      type="text"
+      id="query"
+      placeholder="search"
+      oninput="debounce(main,3000)"
+    />
     <button>Search</button>
 
     <div id="movies"></div>
@@ -28,11 +33,16 @@
 </html>
 
 <script>
+  // "http://www.omdbapi.com/?t=${n}&apikey=eb13a6ff"
+
   //get the input
 
-  async function makeRequest(n) {
+  var timerId;
+  let movies_div = document.getElementById("movies");
+
+  async function searchMovies(n) {
     let response = await fetch(
-      "http://www.omdbapi.com/?t=${n}&apikey=eb13a6ff"
+      `http://www.omdbapi.com/?s=${n}&apikey=eb13a6ff`
     );
 
     let data = await response.json();
@@ -41,16 +51,41 @@
     return data.Search;
   }
 
+  function appendMovies(m) {
+    m.forEach(({ Title }) => {
+      let p = document.createElement("p");
+
+      p.innerText = Title;
+
+      movies_div.append(p);
+    });
+  }
+
   async function main() {
     let name = document.getElementById("query").value;
-    // console.log('name:', name)
 
     if (name.length < 3) {
       return false;
     }
+    let movies = await searchMovies(name);
 
-    let movies = await makeRequest(name);
+    if (movies === undefined) {
+      return false;
+    }
+
+    appendMovies(movies);
     console.log("movies:", movies);
-    // console.log("name:", name);  
+    // console.log("name:", name);
+  }
+
+  function debounce(func, delay) {
+    let name = document.getElementById("query").value;
+
+    if (name.length < 3) {
+      return false;
+    }
+    timerId = setTimeout(() => {
+      func();
+    }, delay);
   }
 </script>
