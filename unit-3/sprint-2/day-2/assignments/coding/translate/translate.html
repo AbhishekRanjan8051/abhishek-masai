@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="translate.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="topnav">
+        <div class="title">
+          <i>Happy Hours Translate</i>
+        
+        <!-- <div class="titlesecond"> -->
+          <a href="https://libretranslate.de/docs/">API Docs</a>
+          <a href="https://github.com/LibreTranslate/LibreTranslate">GitHub</a>
+        </div>
+        <!-- </div> -->
+      </div>
+      <center>
+        <div class="first">
+          <div class="firstlanguagechosseopt">
+            <label for="" id="languages" onclick="showLanguages()"
+              >Translate From :- English</label
+            >
+          </div>
+
+          <textarea
+            id="firstlanginput"
+            cols="50"
+            rows="15"
+            onkeypress="showLanguages()"
+          ></textarea>
+        </div>
+        <button onclick="showLanguages()">Convert</button>
+        <div class="second">
+          <div class="secondlanguagechosseopt">
+            <label for="">Translate Into</label>
+
+            <select name="languages" id="outputlang">
+              <option value="hi" onclick="showLanguages()">Hindi</option>
+              <option value="en" onclick="showLanguages()">English</option>
+              <option value="it" onclick="showLanguages()">Italian</option>
+              <option value="zh" onclick="showLanguages()">Chinese</option>
+              <option value="fr" onclick="showLanguages()">French</option>
+              <option value="de" onclick="showLanguages()">German</option>
+              <option value="ga" onclick="showLanguages()">Irish</option>
+              <option value="ja" onclick="showLanguages()">Japanese</option>
+              <option value="ko" onclick="showLanguages()">Korean</option>
+              <option value="id" onclick="showLanguages()">Indonesian</option>
+              <option value="tr" onclick="showLanguages()">Turkish</option>
+              <option value="pl" onclick="showLanguages()">Polish</option>
+              <option value="pt" onclick="showLanguages()">Portuguese</option>
+              <option value="ru" onclick="showLanguages()">Russian</option>
+              <option value="es" onclick="showLanguages()">Spanish</option>
+              <option value="ar" onclick="showLanguages()">Arabic</option>
+            </select>
+          </div>
+          <textarea name="" id="output" cols="50" rows="15"></textarea>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>
+
+<script src="tarnstale.js"></script>
