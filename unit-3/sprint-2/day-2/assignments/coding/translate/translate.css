@@ -41,12 +41,12 @@ body {
 
 .firstlanguagechosseopt label {
   font-size: 1.5rem;
-  color: rgb(160, 130, 31);
+  color: rgb(240, 187, 15);
   font-weight: 600;
 }
 .secondlanguagechosseopt label {
   font-size: 1.5rem;
-  color: rgb(160, 130, 31);
+  color: rgb(241, 188, 13);
   font-weight: 600;
 }
 
@@ -66,4 +66,5 @@ textarea {
   text-transform: uppercase;
 
   border-radius: 5px;
+  padding: 15px;
 }
