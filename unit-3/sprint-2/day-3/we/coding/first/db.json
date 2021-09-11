@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "age": "1089890"
+    },
+    {
+      "id": 2,
+      "active": false
+    },
+    {
+      "id": 3,
+      "name": "abhishek"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Pizza",
+      "price": 10,
+      "active": true
+    },
+    {
+      "id": 1,
+      "name": "Pizza",
+      "price": 10,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Hamburger",
+      "age": 7,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Ice Cream",
+      "age": 2.5,
+      "active": false
+    },
+    {
+      "id": 4,
+      "name": "kit kat",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "kit kat"
+    },
+    {
+      "id": 6,
+      "name": "arpit"
+    },
+    {
+      "id": 8,
+      "name": "iron man",
+      "active": true
+    },
+
+    {
+      "id": 110,
+      "name": "avengers",
+      "active": true
+    }
+  ]
+}
