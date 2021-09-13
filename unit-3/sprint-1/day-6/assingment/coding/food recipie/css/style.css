@@ -1,0 +1,23 @@
+#navbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-left: 4%;
+
+    padding-right: 4%;
+
+    border: 2px dotted black;
+    border-radius: 10px;
+  }
+
+  #option {
+    display: flex;
+
+    justify-content: space-between;
+  }
+
+  #option h3 {
+    padding-left: 30px;
+    padding-right: 10px;
+  }
