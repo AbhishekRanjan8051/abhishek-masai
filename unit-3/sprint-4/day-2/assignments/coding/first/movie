@@ -1,0 +1,2390 @@
+Microsoft Windows [Version 10.0.19043.1237]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\abhis>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("4a5be3d4-763f-4ee8-a396-8b76f0c76001") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-17T19:36:57.874+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+>
+> use assingment
+switched to db assingment
+>
+> db.createCollection("movie")
+{ "ok" : 1 }
+> show collections
+movie
+>
+> db.movie.find({movie_name:{$eq:"Triggermen"}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+>
+> db.movie.find({movie_name:{$eq:"Willard"}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e509"),
+        "id" : 275,
+        "movie_name" : "Willard",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2004,
+        "budget" : 13793
+}
+>
+> db.movie.find({movie_name:{$ne:"Willard"}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+Type "it" for more
+>
+> db.movie.find({budget:{$gt:9601}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+Type "it" for more
+>
+> db.movie.find({budget:{$gte:9601}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+Type "it" for more
+>
+>
+> db.movie.find({budget:{$lt:12000}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40c"),
+        "id" : 22,
+        "movie_name" : "Memory of a Killer, The (Zaak Alzheimer, De)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 9952
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e411"),
+        "id" : 27,
+        "movie_name" : "Just Go with It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2003,
+        "budget" : 11752
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e412"),
+        "id" : 28,
+        "movie_name" : "Outpost",
+        "movie_genre" : "Action|Horror",
+        "production_year" : 1993,
+        "budget" : 9676
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e418"),
+        "id" : 34,
+        "movie_name" : "Up in Arms",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 2003,
+        "budget" : 9977
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e419"),
+        "id" : 35,
+        "movie_name" : "Yes Men Fix the World, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10465
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e422"),
+        "id" : 44,
+        "movie_name" : "The Stoker",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1992,
+        "budget" : 9041
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e425"),
+        "id" : 47,
+        "movie_name" : "Fugitive Kind, The",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 10967
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e42b"),
+        "id" : 53,
+        "movie_name" : "The Haunting of Helena",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2008,
+        "budget" : 10354
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e42c"),
+        "id" : 54,
+        "movie_name" : "Altiplano",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10428
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e42f"),
+        "id" : 57,
+        "movie_name" : "Romance in Manhattan",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2012,
+        "budget" : 9718
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e431"),
+        "id" : 59,
+        "movie_name" : "Who the Hell Is Juliette? (¿Quién diablos es Juliette?)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2015,
+        "budget" : 10072
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e433"),
+        "id" : 61,
+        "movie_name" : "Taps",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 11367
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e434"),
+        "id" : 62,
+        "movie_name" : "Grave Halloween",
+        "movie_genre" : "Horror",
+        "production_year" : 1994,
+        "budget" : 10582
+}
+Type "it" for more
+>
+>
+> db.movie.find({budget:{$lte:12000}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40c"),
+        "id" : 22,
+        "movie_name" : "Memory of a Killer, The (Zaak Alzheimer, De)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 9952
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e411"),
+        "id" : 27,
+        "movie_name" : "Just Go with It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2003,
+        "budget" : 11752
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e412"),
+        "id" : 28,
+        "movie_name" : "Outpost",
+        "movie_genre" : "Action|Horror",
+        "production_year" : 1993,
+        "budget" : 9676
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e418"),
+        "id" : 34,
+        "movie_name" : "Up in Arms",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 2003,
+        "budget" : 9977
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e419"),
+        "id" : 35,
+        "movie_name" : "Yes Men Fix the World, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10465
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e422"),
+        "id" : 44,
+        "movie_name" : "The Stoker",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1992,
+        "budget" : 9041
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e425"),
+        "id" : 47,
+        "movie_name" : "Fugitive Kind, The",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 2011,
+        "budget" : 10967
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e42b"),
+        "id" : 53,
+        "movie_name" : "The Haunting of Helena",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2008,
+        "budget" : 10354
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e42c"),
+        "id" : 54,
+        "movie_name" : "Altiplano",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 10428
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e42f"),
+        "id" : 57,
+        "movie_name" : "Romance in Manhattan",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2012,
+        "budget" : 9718
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e431"),
+        "id" : 59,
+        "movie_name" : "Who the Hell Is Juliette? (¿Quién diablos es Juliette?)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2015,
+        "budget" : 10072
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e433"),
+        "id" : 61,
+        "movie_name" : "Taps",
+        "movie_genre" : "Drama",
+        "production_year" : 2008,
+        "budget" : 11367
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e434"),
+        "id" : 62,
+        "movie_name" : "Grave Halloween",
+        "movie_genre" : "Horror",
+        "production_year" : 1994,
+        "budget" : 10582
+}
+Type "it" for more
+>
+>
+> db.movie.find({$and:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40b"),
+        "id" : 21,
+        "movie_name" : "The Circle",
+        "movie_genre" : "Documentary|Drama",
+        "production_year" : 2002,
+        "budget" : 17237
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40f"),
+        "id" : 25,
+        "movie_name" : "The Day I Saw Your Heart",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2007,
+        "budget" : 14007
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e410"),
+        "id" : 26,
+        "movie_name" : "Rose Red",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 2018,
+        "budget" : 14944
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e411"),
+        "id" : 27,
+        "movie_name" : "Just Go with It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2003,
+        "budget" : 11752
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e413"),
+        "id" : 29,
+        "movie_name" : "Who'll Stop the Rain",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2013,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e417"),
+        "id" : 33,
+        "movie_name" : "Wog Boy, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 13267
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e419"),
+        "id" : 35,
+        "movie_name" : "Yes Men Fix the World, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 2017,
+        "budget" : 10465
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41a"),
+        "id" : 36,
+        "movie_name" : "Get Over It",
+        "movie_genre" : "Drama",
+        "production_year" : 2014,
+        "budget" : 19228
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41b"),
+        "id" : 37,
+        "movie_name" : "33 Postcards",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19619
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41c"),
+        "id" : 38,
+        "movie_name" : "Virgin Territory",
+        "movie_genre" : "Adventure|Comedy|Romance",
+        "production_year" : 2002,
+        "budget" : 16481
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41e"),
+        "id" : 40,
+        "movie_name" : "Bad Johnson",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 2009,
+        "budget" : 16976
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41f"),
+        "id" : 41,
+        "movie_name" : "Wyvern",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 15519
+}
+Type "it" for more
+>
+>
+> db.movie.find({$or:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40b"),
+        "id" : 21,
+        "movie_name" : "The Circle",
+        "movie_genre" : "Documentary|Drama",
+        "production_year" : 2002,
+        "budget" : 17237
+}
+Type "it" for more
+>
+>
+> db.movie.find({$nor:[{production_year:{$gt:2000}},{budget:{$gt:10000}}]}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e412"),
+        "id" : 28,
+        "movie_name" : "Outpost",
+        "movie_genre" : "Action|Horror",
+        "production_year" : 1993,
+        "budget" : 9676
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e422"),
+        "id" : 44,
+        "movie_name" : "The Stoker",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1992,
+        "budget" : 9041
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e490"),
+        "id" : 154,
+        "movie_name" : "Moustache, La",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 1998,
+        "budget" : 9169
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4a3"),
+        "id" : 173,
+        "movie_name" : "Dracula Untold",
+        "movie_genre" : "Action|Drama|Fantasy",
+        "production_year" : 1996,
+        "budget" : 9604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4c0"),
+        "id" : 202,
+        "movie_name" : "Damnation Alley",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1999,
+        "budget" : 9718
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4cd"),
+        "id" : 215,
+        "movie_name" : "Bob Saget: That Ain't Right",
+        "movie_genre" : "Comedy",
+        "production_year" : 1995,
+        "budget" : 9454
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e51a"),
+        "id" : 292,
+        "movie_name" : "Gay Bed and Breakfast of Terror, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 1998,
+        "budget" : 9713
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e546"),
+        "id" : 336,
+        "movie_name" : "Christmas Party, The (Joulubileet)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9787
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e554"),
+        "id" : 350,
+        "movie_name" : "Meilleur espoir féminin",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2000,
+        "budget" : 9184
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e556"),
+        "id" : 352,
+        "movie_name" : "Keith Lemon: The Film",
+        "movie_genre" : "Comedy",
+        "production_year" : 1995,
+        "budget" : 9139
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e57e"),
+        "id" : 392,
+        "movie_name" : "Down and Derby",
+        "movie_genre" : "Children|Comedy",
+        "production_year" : 1999,
+        "budget" : 9797
+}
+>
+> db.movie.find({$not:[{production_year:{$eq:2000}},{budget:{$eq:10000}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $not. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movie.find({$not:[{production_year:2000}},{budget:10000}}]}).pretty()
+uncaught exception: SyntaxError: missing ] after element list :
+@(shell):1:43
+> db.movie.find({$not:[{production_year:2000},{budget:10000}}]}).pretty()
+uncaught exception: SyntaxError: missing ] after element list :
+@(shell):1:58
+> db.movie.find({$not:{production_year:2000},{budget:10000}}).pretty()
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:43
+>
+>
+> db.movie.find({production_year:{$not:{$eq:2000}}},{budget:{$not:{$eq:10000}}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expression $eq takes exactly 2 arguments. 1 were passed in.",
+        "code" : 16020,
+        "codeName" : "Location16020"
+}
+> db.movie.find({production_year:{$not:{$eq:2000}}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40b"),
+        "id" : 21,
+        "movie_name" : "The Circle",
+        "movie_genre" : "Documentary|Drama",
+        "production_year" : 2002,
+        "budget" : 17237
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40c"),
+        "id" : 22,
+        "movie_name" : "Memory of a Killer, The (Zaak Alzheimer, De)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 9952
+}
+Type "it" for more
+> db.movie.find({$and:[{production_year:{$not:{$eq:2000}}},{budget:{$not:{$eq:10000}}}]})
+{ "_id" : ObjectId("6145349096cc986291b0e3f7"), "id" : 1, "movie_name" : "Palookaville", "movie_genre" : "Action|Comedy|Drama", "production_year" : 1994, "budget" : 19807 }
+{ "_id" : ObjectId("6145349096cc986291b0e3f8"), "id" : 2, "movie_name" : "Triggermen", "movie_genre" : "Comedy|Crime", "production_year" : 1998, "budget" : 16700 }
+{ "_id" : ObjectId("6145349096cc986291b0e3f9"), "id" : 3, "movie_name" : "Let It Snow", "movie_genre" : "Comedy|Romance", "production_year" : 1999, "budget" : 15360 }
+{ "_id" : ObjectId("6145349096cc986291b0e3fa"), "id" : 4, "movie_name" : "96 Minutes ", "movie_genre" : "Drama|Thriller", "production_year" : 1997, "budget" : 15582 }
+{ "_id" : ObjectId("6145349096cc986291b0e3fb"), "id" : 5, "movie_name" : "Ro.Go.Pa.G.", "movie_genre" : "Comedy|Drama", "production_year" : 2001, "budget" : 10076 }
+{ "_id" : ObjectId("6145349096cc986291b0e3fc"), "id" : 6, "movie_name" : "Girls Rock!", "movie_genre" : "Documentary", "production_year" : 2006, "budget" : 15009 }
+{ "_id" : ObjectId("6145349096cc986291b0e3fd"), "id" : 7, "movie_name" : "Alcan Highway (Alaska Highway)", "movie_genre" : "Documentary", "production_year" : 1992, "budget" : 17847 }
+{ "_id" : ObjectId("6145349096cc986291b0e400"), "id" : 10, "movie_name" : "Stolen Life, A", "movie_genre" : "Drama", "production_year" : 2011, "budget" : 16604 }
+{ "_id" : ObjectId("6145349096cc986291b0e401"), "id" : 11, "movie_name" : "Jack the Ripper", "movie_genre" : "Crime|Drama|Mystery|Thriller", "production_year" : 2009, "budget" : 14980 }
+{ "_id" : ObjectId("6145349096cc986291b0e402"), "id" : 12, "movie_name" : "Green Mile, The", "movie_genre" : "Crime|Drama", "production_year" : 1995, "budget" : 11498 }
+{ "_id" : ObjectId("6145349096cc986291b0e403"), "id" : 13, "movie_name" : "Castaway", "movie_genre" : "Adventure|Drama", "production_year" : 2013, "budget" : 16703 }
+{ "_id" : ObjectId("6145349096cc986291b0e404"), "id" : 14, "movie_name" : "Running On Karma (Daai Zek Lou)", "movie_genre" : "Action|Drama|Thriller", "production_year" : 2002, "budget" : 19657 }
+{ "_id" : ObjectId("6145349096cc986291b0e405"), "id" : 15, "movie_name" : "Andrew Dice Clay: Indestructible", "movie_genre" : "Comedy", "production_year" : 1998, "budget" : 9998 }
+{ "_id" : ObjectId("6145349096cc986291b0e406"), "id" : 16, "movie_name" : "Beneath", "movie_genre" : "Horror", "production_year" : 1998, "budget" : 14750 }
+{ "_id" : ObjectId("6145349096cc986291b0e407"), "id" : 17, "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)", "movie_genre" : "Fantasy|Horror|Mystery", "production_year" : 2004, "budget" : 9890 }
+{ "_id" : ObjectId("6145349096cc986291b0e408"), "id" : 18, "movie_name" : "Vacancy 2: The First Cut", "movie_genre" : "Horror|Thriller", "production_year" : 2005, "budget" : 12394 }
+{ "_id" : ObjectId("6145349096cc986291b0e409"), "id" : 19, "movie_name" : "Minus Man, The", "movie_genre" : "Drama|Mystery", "production_year" : 2017, "budget" : 11487 }
+{ "_id" : ObjectId("6145349096cc986291b0e40a"), "id" : 20, "movie_name" : "Pusher", "movie_genre" : "Crime|Thriller", "production_year" : 1993, "budget" : 17262 }
+{ "_id" : ObjectId("6145349096cc986291b0e40b"), "id" : 21, "movie_name" : "The Circle", "movie_genre" : "Documentary|Drama", "production_year" : 2002, "budget" : 17237 }
+{ "_id" : ObjectId("6145349096cc986291b0e40c"), "id" : 22, "movie_name" : "Memory of a Killer, The (Zaak Alzheimer, De)", "movie_genre" : "Action|Crime|Drama|Thriller", "production_year" : 2004, "budget" : 9952 }
+Type "it" for more
+>
+> db.movie.find({$and:[{production_year:{$not:{$eq:2000}}},{budget:{$not:{$eq:10000}}}]}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40b"),
+        "id" : 21,
+        "movie_name" : "The Circle",
+        "movie_genre" : "Documentary|Drama",
+        "production_year" : 2002,
+        "budget" : 17237
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40c"),
+        "id" : 22,
+        "movie_name" : "Memory of a Killer, The (Zaak Alzheimer, De)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 9952
+}
+Type "it" for more
+>
+> db.movie.find({production_year:{$in:[2000,2010]}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e424"),
+        "id" : 46,
+        "movie_name" : "Story of Mankind, The",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 2000,
+        "budget" : 16721
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e429"),
+        "id" : 51,
+        "movie_name" : "Big Boys Gone Bananas!*",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 12328
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e444"),
+        "id" : 78,
+        "movie_name" : "Baader Meinhof Komplex, Der",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2010,
+        "budget" : 16955
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e44f"),
+        "id" : 89,
+        "movie_name" : "Saint Ralph",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2000,
+        "budget" : 14600
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e462"),
+        "id" : 108,
+        "movie_name" : "Make Like a Thief (Juokse kuin varas)",
+        "movie_genre" : "Comedy|Crime|Thriller",
+        "production_year" : 2000,
+        "budget" : 19552
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e47d"),
+        "id" : 135,
+        "movie_name" : "My Name Is Bruce",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2000,
+        "budget" : 19903
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e49b"),
+        "id" : 165,
+        "movie_name" : "Beethoven's 5th",
+        "movie_genre" : "Adventure|Children|Comedy",
+        "production_year" : 2000,
+        "budget" : 12560
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4ac"),
+        "id" : 182,
+        "movie_name" : "Dogs in Space",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 18966
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4b0"),
+        "id" : 186,
+        "movie_name" : "Vinyan",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 14422
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4bd"),
+        "id" : 199,
+        "movie_name" : "Last Night",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2010,
+        "budget" : 14029
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4cf"),
+        "id" : 217,
+        "movie_name" : "Foreign Affair, A (2 Brothers & a Bride)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2010,
+        "budget" : 17281
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4e8"),
+        "id" : 242,
+        "movie_name" : "Sisters, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : 15252
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4e9"),
+        "id" : 243,
+        "movie_name" : "Here Without Me (Inja bedoone man)",
+        "movie_genre" : "Drama|Film-Noir|Mystery|Romance",
+        "production_year" : 2010,
+        "budget" : 13274
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e546"),
+        "id" : 336,
+        "movie_name" : "Christmas Party, The (Joulubileet)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 9787
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e550"),
+        "id" : 346,
+        "movie_name" : "Witchfinder General (Conquerer Worm, The)",
+        "movie_genre" : "Horror",
+        "production_year" : 2010,
+        "budget" : 14534
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e554"),
+        "id" : 350,
+        "movie_name" : "Meilleur espoir féminin",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2000,
+        "budget" : 9184
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e557"),
+        "id" : 353,
+        "movie_name" : "Angels in the Outfield",
+        "movie_genre" : "Children|Comedy",
+        "production_year" : 2000,
+        "budget" : 12446
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e562"),
+        "id" : 364,
+        "movie_name" : "Unknown Soldier, The (Unbekannte Soldat, Der)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 15854
+}
+Type "it" for more
+>
+>
+> db.movie.find({production_year:{$in:[2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]}}).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40b"),
+        "id" : 21,
+        "movie_name" : "The Circle",
+        "movie_genre" : "Documentary|Drama",
+        "production_year" : 2002,
+        "budget" : 17237
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40c"),
+        "id" : 22,
+        "movie_name" : "Memory of a Killer, The (Zaak Alzheimer, De)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 9952
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40f"),
+        "id" : 25,
+        "movie_name" : "The Day I Saw Your Heart",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2007,
+        "budget" : 14007
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e411"),
+        "id" : 27,
+        "movie_name" : "Just Go with It",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2003,
+        "budget" : 11752
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e418"),
+        "id" : 34,
+        "movie_name" : "Up in Arms",
+        "movie_genre" : "Comedy|Musical",
+        "production_year" : 2003,
+        "budget" : 9977
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41b"),
+        "id" : 37,
+        "movie_name" : "33 Postcards",
+        "movie_genre" : "Drama",
+        "production_year" : 2009,
+        "budget" : 19619
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41c"),
+        "id" : 38,
+        "movie_name" : "Virgin Territory",
+        "movie_genre" : "Adventure|Comedy|Romance",
+        "production_year" : 2002,
+        "budget" : 16481
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41e"),
+        "id" : 40,
+        "movie_name" : "Bad Johnson",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 2009,
+        "budget" : 16976
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e41f"),
+        "id" : 41,
+        "movie_name" : "Wyvern",
+        "movie_genre" : "Horror|Sci-Fi|Thriller",
+        "production_year" : 2009,
+        "budget" : 15519
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e421"),
+        "id" : 43,
+        "movie_name" : "Pete's Dragon",
+        "movie_genre" : "Adventure|Animation|Children|Musical",
+        "production_year" : 2007,
+        "budget" : 13923
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e424"),
+        "id" : 46,
+        "movie_name" : "Story of Mankind, The",
+        "movie_genre" : "Drama|Fantasy",
+        "production_year" : 2000,
+        "budget" : 16721
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e429"),
+        "id" : 51,
+        "movie_name" : "Big Boys Gone Bananas!*",
+        "movie_genre" : "Documentary",
+        "production_year" : 2010,
+        "budget" : 12328
+}
+Type "it" for more
+>
+> db.movie.find({$sort:{production_year:-1,movie_name:-1}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $sort. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movie.find([{$sort:{production_year:-1,movie_name:-1}}]).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expected field filterto be of type object",
+        "code" : 14,
+        "codeName" : "TypeMismatch"
+}
+> db.movie.aggregate([{$sort:{production_year:-1,movie_name:-1}}]).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e578"),
+        "id" : 386,
+        "movie_name" : "Our Relations",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 13850
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e572"),
+        "id" : 380,
+        "movie_name" : "Only Lovers Left Alive",
+        "movie_genre" : "Drama|Horror|Romance",
+        "production_year" : 2020,
+        "budget" : 13194
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4f3"),
+        "id" : 253,
+        "movie_name" : "Omar Killed Me (Omar m'a tuer)",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 10156
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e5a6"),
+        "id" : 432,
+        "movie_name" : "Nowhere Boy",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 13161
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4ab"),
+        "id" : 181,
+        "movie_name" : "Moment to Remember, A (Nae meorisokui jiwoogae)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2020,
+        "budget" : 19238
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e43f"),
+        "id" : 73,
+        "movie_name" : "Maya Lin: A Strong Clear Vision",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 14382
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e581"),
+        "id" : 395,
+        "movie_name" : "Infernal Affairs 2 (Mou gaan dou II)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 17140
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e57c"),
+        "id" : 390,
+        "movie_name" : "Iceman",
+        "movie_genre" : "Action|Comedy|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 15904
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e5cf"),
+        "id" : 473,
+        "movie_name" : "Harry in Your Pocket",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 11121
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e547"),
+        "id" : 337,
+        "movie_name" : "Guilty (Présumé coupable)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 13203
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e458"),
+        "id" : 98,
+        "movie_name" : "Girls on the Road (a.k.a. Hot Summer Week)",
+        "movie_genre" : "Comedy|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 15549
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e503"),
+        "id" : 269,
+        "movie_name" : "Girl Who Leapt Through Time, The (Toki o kakeru shôjo)",
+        "movie_genre" : "Animation|Comedy|Drama|Romance|Sci-Fi",
+        "production_year" : 2020,
+        "budget" : 16801
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e5e8"),
+        "id" : 498,
+        "movie_name" : "Gacy",
+        "movie_genre" : "Crime|Drama|Horror|Thriller",
+        "production_year" : 2020,
+        "budget" : 16112
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e527"),
+        "id" : 305,
+        "movie_name" : "Devil and Max Devlin, The",
+        "movie_genre" : "Comedy|Fantasy",
+        "production_year" : 2020,
+        "budget" : 16674
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e517"),
+        "id" : 289,
+        "movie_name" : "Cab for Three, A (Taxi para tres)",
+        "movie_genre" : "Action|Comedy|Crime|Drama",
+        "production_year" : 2020,
+        "budget" : 15701
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e5b1"),
+        "id" : 443,
+        "movie_name" : "Attack on the Iron Coast",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2020,
+        "budget" : 11406
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e417"),
+        "id" : 33,
+        "movie_name" : "Wog Boy, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 13267
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e4e5"),
+        "id" : 239,
+        "movie_name" : "Virtual JFK: Vietnam If Kennedy Had Lived",
+        "movie_genre" : "Documentary",
+        "production_year" : 2019,
+        "budget" : 17270
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e5aa"),
+        "id" : 436,
+        "movie_name" : "The Story of Asya Klyachina",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 9848
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e5e3"),
+        "id" : 493,
+        "movie_name" : "The Phantom Light",
+        "movie_genre" : "Mystery|Thriller",
+        "production_year" : 2019,
+        "budget" : 16503
+}
+Type "it" for more
+>
+>
+> db.user.find().pretty()
+> db.movie.find().pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f7"),
+        "id" : 1,
+        "movie_name" : "Palookaville",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 1994,
+        "budget" : 19807
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f8"),
+        "id" : 2,
+        "movie_name" : "Triggermen",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1998,
+        "budget" : 16700
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3f9"),
+        "id" : 3,
+        "movie_name" : "Let It Snow",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 15360
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fa"),
+        "id" : 4,
+        "movie_name" : "96 Minutes ",
+        "movie_genre" : "Drama|Thriller",
+        "production_year" : 1997,
+        "budget" : 15582
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fb"),
+        "id" : 5,
+        "movie_name" : "Ro.Go.Pa.G.",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2001,
+        "budget" : 10076
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fc"),
+        "id" : 6,
+        "movie_name" : "Girls Rock!",
+        "movie_genre" : "Documentary",
+        "production_year" : 2006,
+        "budget" : 15009
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fd"),
+        "id" : 7,
+        "movie_name" : "Alcan Highway (Alaska Highway)",
+        "movie_genre" : "Documentary",
+        "production_year" : 1992,
+        "budget" : 17847
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3fe"),
+        "id" : 8,
+        "movie_name" : "Wrestling Queens",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 11634
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e3ff"),
+        "id" : 9,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2000,
+        "budget" : 10765
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e400"),
+        "id" : 10,
+        "movie_name" : "Stolen Life, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 16604
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e406"),
+        "id" : 16,
+        "movie_name" : "Beneath",
+        "movie_genre" : "Horror",
+        "production_year" : 1998,
+        "budget" : 14750
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e407"),
+        "id" : 17,
+        "movie_name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
+        "movie_genre" : "Fantasy|Horror|Mystery",
+        "production_year" : 2004,
+        "budget" : 9890
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e408"),
+        "id" : 18,
+        "movie_name" : "Vacancy 2: The First Cut",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2005,
+        "budget" : 12394
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e409"),
+        "id" : 19,
+        "movie_name" : "Minus Man, The",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 2017,
+        "budget" : 11487
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e40a"),
+        "id" : 20,
+        "movie_name" : "Pusher",
+        "movie_genre" : "Crime|Thriller",
+        "production_year" : 1993,
+        "budget" : 17262
+}
+Type "it" for more
+>
+> db.movie.find().skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("6145349096cc986291b0e401"),
+        "id" : 11,
+        "movie_name" : "Jack the Ripper",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 14980
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e402"),
+        "id" : 12,
+        "movie_name" : "Green Mile, The",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1995,
+        "budget" : 11498
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e403"),
+        "id" : 13,
+        "movie_name" : "Castaway",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2013,
+        "budget" : 16703
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e404"),
+        "id" : 14,
+        "movie_name" : "Running On Karma (Daai Zek Lou)",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2002,
+        "budget" : 19657
+}
+{
+        "_id" : ObjectId("6145349096cc986291b0e405"),
+        "id" : 15,
+        "movie_name" : "Andrew Dice Clay: Indestructible",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9998
+}
+>
+>
+>
