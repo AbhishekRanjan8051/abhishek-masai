@@ -4,11 +4,11 @@ const connect = require("./config/db");
 
 const app = express();
 
-const userController = require("./controller/user.controller");
-app.use("/users", userController);
+const usersController = require("./controller/user.controller");
+app.use("/users", usersController);
 
 const start = async () => {
-  await connect;
+  await connect();
 
   app.listen(2346, () => {
     console.log("listening on port 2346");
