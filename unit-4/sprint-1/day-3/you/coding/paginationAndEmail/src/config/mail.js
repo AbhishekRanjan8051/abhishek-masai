@@ -1,14 +1,16 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
-const { CURRENT_ENVIROMENT, USERNAME, PASSWORD } = process.env;
+const { CURRENT_ENVIRONMENT, SMTP_USERNAME, SMTP_PASSWORD, SMTP_PORT } =
+  process.env;
+
 const transporter = nodemailer.createTransport({
-  host: CURRENT_ENVIROMENT == "development" ? "smtp.mailtrap.io" : "",
-  port: 587,
+  host: CURRENT_ENVIRONMENT == "development" ? "smtp.mailtrap.io" : "",
+  port: SMTP_PORT,
   secure: false,
   auth: {
-    user: USERNAME,
-    pass: PASSWORD,
+    user: SMTP_USERNAME,
+    pass: SMTP_PASSWORD,
   },
 });
 
