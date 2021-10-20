@@ -1,0 +1,12 @@
+#gridmp {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 25px;
+  width: 250px;
+  margin: 200px auto auto auto;
+}
+
+#gridmp button {
+  width: 130px;
+  border-radius: 10px;
+}
