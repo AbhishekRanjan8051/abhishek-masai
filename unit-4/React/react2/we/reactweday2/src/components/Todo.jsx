@@ -8,7 +8,7 @@ function Todo() {
     setText(e.target.value);
   };
   const handleAdd = () => {
-    setTodo([...todo, [], text]);
+    setTodo([...todo, text]);
     setText("");
   };
   return (
