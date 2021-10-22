@@ -1,5 +1,6 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
+import { ListItem } from "./ListItem";
 
 function List() {
   const [query, setQuery] = React.useState("");
@@ -13,6 +14,12 @@ function List() {
     };
     setList([...list, payload]);
   };
+
+  const handleDelete = (id) => {
+
+    let updatedlist = list.filter((item)=>item.id !== id);
+    setList(updatedlist);
+  }
   return (
     <>
       <div>
@@ -27,9 +34,9 @@ function List() {
           <button onClick={handledd}>Add</button>
         </div>
 
-        {list.map((item) => (
-          <div key={item.id}>{item.title}</div>
-        ))}
+        {list.map((item,index) => {
+          return <ListItem handleDelete={handleDelete} key={item.id} {...item}></ListItem>;
+        })}
       </div>
     </>
   );
