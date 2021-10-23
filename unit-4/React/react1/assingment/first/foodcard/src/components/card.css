@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  background-color: #e4e4e4;
+}
+.card {
+  margin-top: 50px;
+  border: 2px solid white;
+  width: 80%;
+  margin: 15px auto auto auto;
+  background-color: white;
+  border-radius: 20px;
+}
+.cardbody {
+  text-align: center;
+}
+.cardimg {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+}
+.cardbody > p {
+  word-wrap: normal;
+}
+.detail {
+  display: flex;
+  justify-content: center;
+  gap: 70%;
+}
+.price {
+  display: flex;
+  gap: 10px;
+}
+.price h2:nth-child(2) {
+  color: red;
+  text-decoration: line-through;
+}
+
+.bottom {
+  display: flex;
+  gap: 25%;
+}
+button {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 6rem;
+  height: 3rem;
+  background-color: #2dcc70;
+  color: #ffff;
+  border: 0px;
+  border-radius: 10px;
+}
