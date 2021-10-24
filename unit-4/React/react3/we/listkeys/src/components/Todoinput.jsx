@@ -7,7 +7,12 @@ function TodoInput({ addTodo }) {
     setText(target.value);
   };
   const handleAdd = () => {
-    addTodo(text);
+
+    const data = {
+      title:text,
+      status:false
+    }
+    addTodo(data);
   };
 
   return (
