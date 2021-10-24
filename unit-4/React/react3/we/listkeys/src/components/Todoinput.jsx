@@ -1,4 +1,5 @@
 import React from "react";
+import { nanoid } from "nanoid";
 
 function TodoInput({ addTodo }) {
   const [text, setText] = React.useState("");
@@ -7,11 +8,11 @@ function TodoInput({ addTodo }) {
     setText(target.value);
   };
   const handleAdd = () => {
-
     const data = {
-      title:text,
-      status:false
-    }
+      id: nanoid(4),
+      title: text,
+      status: false,
+    };
     addTodo(data);
   };
 
