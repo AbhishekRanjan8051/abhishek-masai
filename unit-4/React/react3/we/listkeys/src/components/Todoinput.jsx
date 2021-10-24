@@ -9,7 +9,7 @@ function TodoInput({ addTodo }) {
   };
   const handleAdd = () => {
     const data = {
-      id: nanoid(4),
+      id: nanoid(7),
       title: text,
       status: false,
     };

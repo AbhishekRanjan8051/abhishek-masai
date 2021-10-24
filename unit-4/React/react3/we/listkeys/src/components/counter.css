@@ -1,0 +1,12 @@
+.countereven {
+  background-color: aqua;
+  width: 300px;
+  margin: auto;
+  border-radius: 20px 5px;
+}
+.counterodd {
+  background-color: blue;
+  width: 300px;
+  margin: auto;
+  border-radius: 20px 5px;
+}

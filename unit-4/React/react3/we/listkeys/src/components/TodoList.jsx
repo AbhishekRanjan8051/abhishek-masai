@@ -1,11 +1,18 @@
 // import React from "react";
 
-function TodoList({ list }) {
+function TodoList({ list, handleToggle }) {
   return (
     <div>
-      {list.map((e, id) => (
+      {list.map((todo, id) => (
         <p key={id}>
-          {e.title} - {e.status ? "Done" : "Not Done"}
+          {todo.title} - {todo.status ? "Done" : "Not Done"}
+          <button
+            onClick={() => {
+              handleToggle(todo.id);
+            }}
+          >
+            Status
+          </button>
         </p>
       ))}
     </div>
