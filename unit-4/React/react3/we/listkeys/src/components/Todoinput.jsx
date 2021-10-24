@@ -1,10 +1,13 @@
 import React from "react";
 
-function TodoInput() {
+function TodoInput({ addTodo }) {
   const [text, setText] = React.useState("");
 
   const handleChange = ({ target }) => {
     setText(target.value);
+  };
+  const handleAdd = () => {
+    addTodo(text);
   };
 
   return (
@@ -15,7 +18,7 @@ function TodoInput() {
         value={text}
         onChange={handleChange}
       ></input>
-      <button>Add Todo</button>
+      <button onClick={handleAdd}>Add Todo</button>
     </>
   );
 }
