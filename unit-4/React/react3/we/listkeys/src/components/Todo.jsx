@@ -22,6 +22,18 @@ function Todo({ todoList }) {
       <h1>Abhishek Ranjan Masai School</h1>
       <TodoInput addTodo={handleAdd}></TodoInput>
       <TodoList list={list} handleToggle={handleToggle}></TodoList>
+      <button
+        onClick={() => {
+          const updated = list.filter((e) => !e.status);
+          setList(updated);
+        }}
+      >
+        Show Not Completed
+      </button>
+      {/* <button onClick={() =>{
+        const All = list.map((e) => e.status);
+        setList(All);
+      }}>Show</button> */}
     </div>
   );
 }
