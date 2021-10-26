@@ -42,8 +42,12 @@ function Condition() {
       <br />
       <br />
       <button onClick={() => setShow((prev) => !prev)}>Show date</button>
-
+      <br />
+      {/* JSX operator */}
       {show && new Date().toLocaleString()}
+      
+      {/* teneray operator
+      {show ? new Date().toLocaleString() : "data not avaliable"} */}
     </div>
   );
 }
