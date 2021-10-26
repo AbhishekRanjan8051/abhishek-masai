@@ -1,9 +1,10 @@
 import "./App.css";
 import React from "react";
+import { FormTag } from "./components/FormTag";
 // import { Form } from "./components/Form";
 // import { Condition } from "./components/Condition";
 // import { UseRef } from "./components/UseRef";
-import { UserefImage } from "./components/UserefImage";
+// import { UserefImage } from "./components/UserefImage";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <Form></Form> */}
       {/* <Condition></Condition> */}
       {/* <UseRef></UseRef> */}
-      <UserefImage></UserefImage>
+      {/* <UserefImage></UserefImage> */}
+      <FormTag></FormTag>
     </div>
   );
 }
