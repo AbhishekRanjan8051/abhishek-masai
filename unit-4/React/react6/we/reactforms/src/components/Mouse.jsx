@@ -25,10 +25,13 @@ function Mouse() {
           alert("Cut not allowed");
         }}
         style={{
-          width: 200,
-          height: 200,
+          width: 600,
+          height: 100,
           backgroundColor: "coral",
           color: "white",
+          borderRadius: "10px 100px",
+          border: "2px solid blue",
+          margin: "auto",
         }}
       >
         Mouse:{mousePosition}
