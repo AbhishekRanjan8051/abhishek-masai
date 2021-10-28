@@ -1,5 +1,6 @@
 import "./App.css";
 import { Mouse } from "./components/Mouse";
+import { Ref } from "./components/Ref";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <br />
 
       <Mouse></Mouse>
+      <Ref></Ref>
     </div>
   );
 }
