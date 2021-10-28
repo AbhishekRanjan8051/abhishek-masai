@@ -3,7 +3,7 @@ import "./css/button.css";
 
 function Buttoncomponents(props) {
   return (
-    <div className="Button">
+    <div className="stopwatch_button">
       {props.status === 0 ? (
         <button className="btn" onClick={props.start}>
           Start

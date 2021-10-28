@@ -12,7 +12,7 @@ function App() {
   const start = () => {
     run();
     setStatus(1);
-    setinterval(setInterval(run, 10));
+    setinterval(setInterval(run, 100));
   };
 
   var updateMs = time.ms,
@@ -50,7 +50,7 @@ function App() {
   };
   return (
     <div className="App">
-      <h1>StopWatch</h1>
+      <h1>Stop Watch</h1>
       <div className="main">
         <div className="holder">
           <div className="stopwatch">
