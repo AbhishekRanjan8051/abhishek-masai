@@ -1,25 +1,20 @@
 import "./App.css";
 import React from "react";
+import { Counter } from "./components/Counter";
 
 function App() {
-  const [count, setCount] = React.useState(0);
-  console.log("1");
-  React.useEffect(() => {
-    console.log("inside effect");
-  }, []);
-  console.log("2");
-
+  const [showCounter, setshowCounter] = React.useState();
   return (
     <div className="App">
       <h1>Abhishek Ranjan</h1>
-      <h3>count:- {count}</h3>
-
+      {showCounter && <Counter />}
+      <br />
       <button
         onClick={() => {
-          setCount(count + 1);
+          setshowCounter(!showCounter);
         }}
       >
-        Add
+        Show
       </button>
     </div>
   );
