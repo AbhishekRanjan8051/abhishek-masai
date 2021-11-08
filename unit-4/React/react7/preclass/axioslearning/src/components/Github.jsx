@@ -6,9 +6,22 @@ function Github() {
   const [IsLoading, setIsLoading] = React.useState(false);
   const [IsError, setIsError] = React.useState(false);
   const [Users, setUsers] = React.useState([]);
+  React.useEffect(() => {
+    fetchUser("github")
+      .then((res) => {
+        setUsers(res.data.items);
+      })
+      .catch((err) => {
+        setIsError(true);
+      })
+      .finally((err) => {
+        setIsLoading(false);
+      });
+  }, []);
   const handleSearch = () => {
     // console.log("hello");
     setIsLoading(true);
+    setIsError(false);
     fetchUser(query)
       .then((res) => {
         setUsers(res.data.items);
@@ -33,6 +46,7 @@ function Github() {
           {IsLoading ? "loading" : "SEARCH"}
         </button>
       </div>
+      {IsError ? "please fill some text" : null}
       <div>
         {Users.map((item) => (
           <div key={item.id}>{item.login}</div>
