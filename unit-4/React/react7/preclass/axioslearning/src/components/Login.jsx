@@ -32,6 +32,10 @@ function Login() {
   if (isAuth) {
     return (
       <div>
+        <img
+          src="https://pngimg.com/uploads/welcome/welcome_PNG78.png"
+          alt="Welcome"
+        />
         <h1>Welcome to requres api loginUser</h1>
         <h3>token:{token}</h3>
       </div>
