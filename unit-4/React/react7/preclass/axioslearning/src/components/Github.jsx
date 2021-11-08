@@ -3,9 +3,13 @@ import { fetchUser } from "./fetchUser";
 
 function Github() {
   const [query, setQuery] = React.useState("");
+
   const [IsLoading, setIsLoading] = React.useState(false);
+
   const [IsError, setIsError] = React.useState(false);
+
   const [Users, setUsers] = React.useState([]);
+
   React.useEffect(() => {
     fetchUser("github")
       .then((res) => {
@@ -18,6 +22,7 @@ function Github() {
         setIsLoading(false);
       });
   }, []);
+  
   const handleSearch = () => {
     // console.log("hello");
     setIsLoading(true);
