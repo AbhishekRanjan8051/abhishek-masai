@@ -1,0 +1,123 @@
+.profile-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 10%;
+  min-height: fit-content;
+  background-color: blueviolet;
+}
+.profile-parent {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+}
+.profile-detailsname {
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+}
+.profile-details-role {
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 24px 0;
+}
+.profile-details-role h1 {
+  font-size: 40px;
+  font-family: cursive;
+}
+.nametext {
+  color: #ffffff;
+}
+.pofile-tagline {
+  font-size: 25px;
+  margin: 5px 0 0 0;
+  font-family: "Times New Roman", Times, serif;
+}
+.highlightedtext {
+  color: darkorange;
+}
+.profile-option .btn-resume {
+  margin: 0 0 0 28px;
+}
+.profile-option .btn-resume:hover {
+  background-color: cornsilk;
+  color: black;
+  transform: scale(1.1);
+}
+.profile-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0 0 white;
+  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  margin: 0 0 0 400px;
+  /* border: 1px solid white; */
+}
+.profile-picture-bg {
+  height: 95%;
+  width: 95%;
+  background-image: url(..//assests/Home/abhishek.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+.profile-picture-bg:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+}
+.clz .clz-icon {
+  color: white;
+  /* background-color: #ffffff; */
+  padding: 8px;
+  /* padding-left: 0px; */
+}
+.clz .clz-icon img:hover {
+  transform: scale(1.5);
+}
+.btn-hire {
+  font-weight: bold;
+  font-size: xx-large;
+  background-color: rgb(14, 14, 61);
+  color: white;
+  width: fit-content;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-resume {
+  font-weight: bold;
+  font-size: xx-large;
+  background-color: rgb(20, 139, 36);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: fit-content;
+}
+.profile-option {
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 1110px) {
+  .profile-picture {
+    margin: 0 0 0 80px !important;
+  }
+  .profile-detailsname {
+    font-size: 20px;
+  }
+  .profile-details-role .nametext {
+    font-size: 12px;
+  }
+  .profile-option .btn {
+    width: 120px;
+    padding: 11px 0;
+  }
+}
