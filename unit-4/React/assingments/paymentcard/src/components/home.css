@@ -1,0 +1,18 @@
+.main-container {
+  width: 70%;
+  height: 500px;
+  background-color: #fea500;
+  margin: auto;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin: 0 0 0 10em;
+}
+
+Button  {
+  margin-top: 5em;
+  text-transform: uppercase;
+}
