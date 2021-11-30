@@ -1,9 +1,12 @@
 import React from "react";
 
-function Payment() {
+function Payment(props) {
+  const styles = {
+    textTransform: "capitalize",
+  };
   return (
     <div>
-      <h1>Pay</h1>
+      <h1 style={styles}>{props.pay}</h1>
     </div>
   );
 }

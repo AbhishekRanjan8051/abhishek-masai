@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Home } from "./components/Home";
+import { Home, Homes } from "./components/Home";
 
 function App() {
   return (
@@ -8,10 +8,10 @@ function App() {
       <h1>Payment Card</h1>
 
       <Home />
-      <br/>
-      <br/>
-      <hr/>
-      <Home />
+      <br />
+      <br />
+      <hr />
+     <Homes/>
     </div>
   );
 }

@@ -1,9 +1,12 @@
 import React from "react";
 
-function Company() {
+function Company(props) {
+  const styles = {
+    textTransform: "captilize",
+  };
   return (
     <div>
-      <h1>Amazon Gift</h1>
+      <h1 style={styles}>{props.name} Gift</h1>
     </div>
   );
 }
