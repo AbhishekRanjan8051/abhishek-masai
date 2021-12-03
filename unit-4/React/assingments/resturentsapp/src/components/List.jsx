@@ -8,19 +8,7 @@ const Container = styled.div`
 `;
 
 const Card = styled.div`
-  ${
-    "" /* width: 95px;
-  overflow: hidden;
-  border-radius: 25px;
-  border: 1px solid lavender;
-  margin: 10px;
- 
-  width;150px;
-  height;150px;
-  display:flex;
-  flex-direction: column;
-  justify-content:space-between; */
-  }
+  
   box-shadow: 5px 5px 15px 5px rgba(100, 150, 200, 1);
   height: 300px;
   width: 250px;

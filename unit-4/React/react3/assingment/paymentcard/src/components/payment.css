@@ -1,0 +1,16 @@
+.payment {
+  background-color: grey;
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  padding:5px
+  
+
+}
+.paymentbody {
+    background-color:rgb(240, 240, 231);
+    height:90%
+    /* margin: 10px 15px; */
+    
+
+}
