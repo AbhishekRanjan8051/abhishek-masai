@@ -1,0 +1,36 @@
+* {
+  /* background-color: rgb(186, 220, 221); */
+}
+.additem {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 5px;
+  margin: auto;
+  border-radius: 15px;
+}
+.additem > input {
+  border: none;
+}
+.each {
+  background-color: blue;
+  width: fit-content;
+  margin: auto;
+  color: white;
+  height: 30px;
+  gap: 0.5em;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.addbuttons {
+  margin-left: 6px;
+}
+.remove > button {
+  width: fit-content;
+  padding: 5px;
+  margin: 8px auto auto auto;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius:5px;
+}

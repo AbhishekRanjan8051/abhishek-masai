@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { addTodos, deleteTodos,removeTodos } from "../actions";
+import { addTodos, deleteTodos, removeTodos } from "../actions";
+
+import "./todo.css";
 
 function Todo() {
   const [inputdata, setInputdata] = React.useState("");
@@ -13,7 +15,7 @@ function Todo() {
       <div className="parent">
         <div className="child">
           <figure>
-            <figcaption>Add your list here 🗒️</figcaption>
+            <figcaption>Add your list here 🔥</figcaption>
           </figure>
 
           <div className="additem">
@@ -33,24 +35,31 @@ function Todo() {
             {lists.map((elem) => {
               return (
                 <div className="each" key={elem.id}>
-                  <h3>{elem.data}</h3>
-                  <i
-                    className="far fa-trash-alt addbuttons"
-                    title="delete button"
-                    onClick={() => dispatch(deleteTodos(elem.id))}
-                  ></i>
+                  <h3>
+                    {elem.data}
+                    <i
+                      className="far fa-trash-alt addbuttons"
+                      title="delete button"
+                      onClick={() => dispatch(deleteTodos(elem.id))}
+                    ></i>
+                  </h3>
                 </div>
               );
             })}
           </div>
-          <div className="show">
-            <button className="btn effet04" data-sm-link-text="remove All" onClick={() =>dispatch(removeTodos())}>
-              <span>Check list</span>
+          <div className="remove">
+            <button
+              className="btn effet04"
+              data-sm-link-text="remove All"
+              onClick={() => dispatch(removeTodos())}
+            >
+              Check list
+              {/* <span></span> */}
             </button>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 export { Todo };
