@@ -1,0 +1,14 @@
+.active {
+  color: rgb(87, 88, 17);
+  border-bottom: 1px solid red;
+}
+
+.navbar {
+  background-color: rgb(186, 209, 209);
+  font-size: 1rem;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-around;
+  padding:15px;
+
+}

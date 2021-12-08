@@ -1,9 +1,14 @@
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+
+import Main from "./components/Main";
 
 function App() {
   return (
     <div className="App">
-      <h1>Router Dynamically</h1>
+      <BrowserRouter>
+        <Main />
+      </BrowserRouter>
     </div>
   );
 }
