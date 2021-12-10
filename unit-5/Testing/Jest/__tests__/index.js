@@ -44,4 +44,53 @@ describe("equal", () => {
     let b = [1, 2];
     expect(a).toEqual(expect.arrayContaining(b));
   });
+
+  // obj checking
+
+  test("array a and b is not equal {}", () => {
+    expect({ a: 1 }).toEqual({ a: 1 });
+  });
+
+  // eamil checker
+
+  test("array a and b is not equal {}", () => {
+    let obj = { username: "masaischool", email: "#masai@masaischool.com" };
+    let out = {
+      username: expect.any(String),
+      email: expect.stringContaining("#","@masaischool.com"),
+    };
+
+    expect(obj).toEqual(out);
+  });
+
+  test("username present or not present", () => {
+    let username = ['masai','admin','abhishek','ranjan']
+    expect(username).toContain('masai')
+    expect(username).toContain('ranjan')
+  })
 });
+
+
+// operator tests
+
+describe("oparator checking", () => {
+  test("value is <= 300",()=>{
+    let m = 100;
+    let n = 150;
+
+    expect(m+n).toBeLessThanOrEqual(300);
+  })
+  test("value is < 300",()=>{
+    let m = 100;
+    let n = 120;
+
+    expect(m+n).toBeLessThanOrEqual(300);
+  })
+  // length checking
+  test("length testing",()=>{
+    let m = "masaischool"
+    let n = m.length;
+
+    expect(n).toBeGreaterThan(6 )
+  })
+})
