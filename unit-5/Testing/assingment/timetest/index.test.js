@@ -1,4 +1,4 @@
-const { millisec, Sec, Min, Mins } = require("../");
+const { millisec, Sec, Min, Mins } = require("./index");
 
 describe("converting", function () {
   test("convert time into string", function () {
