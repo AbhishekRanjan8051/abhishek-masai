@@ -1,28 +1,25 @@
-const rotateArray = function (nums, k) {
-  function reverse(arr, start, end) {
-    while (start < end) {
-      [arr[start], arr[end]] = [arr[end], arr[start]];
-      start++;
-      end--;
-    }
+function runProgram(input) {
+  var newInput = input.split("\n");
+
+  var LK = newInput[0].split(" ").map(Number);
+  var data = newInput[1].split(" ").map(Number);
+
+  var K = Number(LK[1]);
+  var n = data.length;
+
+  var MOD = K % n;
+
+  var result = "";
+  for (var j = 0; j <=  MOD-1 ; j++) {
+    result += data[j] + " ";
   }
 
-  k %= nums.length;
+  var output = "";
+  for (var k = MOD; k <= n - 1; k++) {
+    output += data[k] + " ";
+  }
 
-  reverse(nums, 0, nums.length - 1);
-  reverse(nums, 0, k - 1);
-  reverse(nums, k, nums.length - 1);
-
-  return nums.join(" ");
-};
-function runProgram(input) {
-  let newInput = input.split("\n");
-
-  let [n, k] = newInput[0].split(" ").map(Number);
-  let data = newInput[1].split(" ").map(Number);
-
-  let final = rotateArray(data, k);
-  console.log(final);
+  console.log(output + result);
 }
 if (process.env.USERNAME === "ABHISHEK RANJAN") {
   runProgram(`6 4
