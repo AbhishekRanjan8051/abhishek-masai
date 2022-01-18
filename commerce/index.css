@@ -1,0 +1,38 @@
+.navbar {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius:20px;
+
+}
+.navbar > button {
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  background: none;
+}
+.mainbox {
+ background-color: rgb(226, 94, 94);
+}
+.productform > form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+#main {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin:2vh 20vw;
+}
+.imge {
+  height: 50vh;
+}
+.rightnavbar > i {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.productfillcontainer{
+  background-color:rgb(94, 185, 192)
+}

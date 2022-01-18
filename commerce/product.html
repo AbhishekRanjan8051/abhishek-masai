@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="productfillcontainer">
+      <div class="navbar">
+        <div>
+          <a href="index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="product.html">
+            <button>Login</button>
+          </a>
+          <a href="cart.html">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="productform">
+        <form id="products">
+          <label>Product Name</label>
+          <input type="text" id="name" placeholder="Product Nmae" />
+          <label for="decription">Product Description</label>
+          <input
+            type="text"
+            id="description"
+            placeholder="Product Description"
+          />
+          <label for="image">Product Image Url</label>
+          <input type="text" id="image" placeholder="Product Image Url" />
+          <label for="price">Product Price</label>
+          <input type="number" id="price" placeholder="Product Price" />
+        </form>
+        <br />
+        <button onclick="storeproduct()" class="submit">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="product.js"></script>
